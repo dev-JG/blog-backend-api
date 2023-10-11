@@ -26,7 +26,7 @@ public class EhcacheConfig {
                 .memoryStoreEvictionPolicy("LRU")
                 .transactionalMode(CacheConfiguration.TransactionalMode.OFF)
                 .persistence(new PersistenceConfiguration().strategy(PersistenceConfiguration.Strategy.LOCALTEMPSWAP))
-                .name("scrapCacheManager");
+                .name("twoMinuteCacheManager");
 
         Cache getAuthenticatedMenuByUriCache = new Cache(getCacheConfig);
         manager.addCache(getAuthenticatedMenuByUriCache);

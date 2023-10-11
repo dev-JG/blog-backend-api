@@ -4,11 +4,12 @@ import com.querydsl.core.annotations.QueryProjection;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Setter
 @Getter
-public class PopularKeywordResponse {
+public class PopularKeywordResponse implements Serializable {
     private String keyword;
     private int count;
     private LocalDateTime lastSearchDate;
