@@ -24,7 +24,7 @@ public class AsyncBlogSearchService {
 
         var logEntity = keywordSearchLogRepository.findFirstByKeywordEquals(keyword);
 
-        if (Objects.isNull(logEntity)) {
+        if (Objects.isNull(logEntity)) { // 기존에 조회된 적이 없는 케이스
             logEntity = new keywordSearchLog();
             logEntity.setKeyword(keyword);
             logEntity.setCount(1);
