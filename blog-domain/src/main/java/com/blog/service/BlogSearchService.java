@@ -13,12 +13,12 @@ import org.springframework.stereotype.Service;
 public class BlogSearchService {
 
     private final KakaoBlogApiClient kakaoBlogApiClient;
+    private final AsyncBlogSearchService asyncBlogSearchService;
 
     public BlogSearchResponse<MetaResponse, DocumentResponse> searchBlogWithCondition(
             BlogSearchRequest searchRequest
     ) {
-
-        // todo 검색한 키워드 카운트를 비동기 디비저장 / 횟수
+        asyncBlogSearchService.asyncSearchCountUp(searchRequest.getQuery());
 
         // todo 카카오 실패시 네이버 호출하도록
 
