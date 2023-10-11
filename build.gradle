@@ -1,3 +1,9 @@
+buildscript {
+    ext {
+        queryDslVersion = "5.0.0"
+    }
+}
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.16'
@@ -37,6 +43,12 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok'
 
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        // QueryDSL
+        implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+        annotationProcessor(
+                "javax.persistence:javax.persistence-api",
+                "javax.annotation:javax.annotation-api",
+                "com.querydsl:querydsl-apt:${queryDslVersion}:jpa")
     }
 
     tasks.named('bootJar') {
