@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/vi/blog/search")
+@RequestMapping("/api/v1/blog/search")
 public class BlogSearchController {
 
     private final BlogSearchService blogSearchService;

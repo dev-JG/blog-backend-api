@@ -12,7 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/vi/search/keyword")
+@RequestMapping("/api/v1/search/keyword")
 public class KeywordController {
 
     private final KeywordSearchService keywordSearchService;
