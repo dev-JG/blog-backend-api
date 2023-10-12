@@ -39,6 +39,7 @@ resilience4j:
       default:
         registerHealthIndicator: true
         slidingWindowSize: 10
+        minimumNumberOfCalls: 6
         failureRateThreshold: 50
         waitDurationInOpenState : 10s
     instances:
