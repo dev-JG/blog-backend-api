@@ -17,9 +17,18 @@ public class BlogSearchRequest {
     public MultiValueMap<String, String> toMultiValueMap() {
         MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("query", getQuery());
-        params.add("sort", getSort().getSort());
+        params.add("sort", getSort().getKakaoSort());
         params.add("page", String.valueOf(getPage()));
         params.add("size", String.valueOf(getSize()));
+        return params;
+    }
+
+    public MultiValueMap<String, String> toMultiValueMapWithNaver() {
+        MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+        params.add("query", getQuery());
+        params.add("sort", getSort().getNaverSort());
+        params.add("start", String.valueOf(getPage()));
+        params.add("display", String.valueOf(getSize()));
         return params;
     }
 }

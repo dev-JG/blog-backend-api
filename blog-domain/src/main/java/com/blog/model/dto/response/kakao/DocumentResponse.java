@@ -1,4 +1,4 @@
-package com.blog.model.dto.response;
+package com.blog.model.dto.response.kakao;
 
 import lombok.Getter;
 import lombok.Setter;

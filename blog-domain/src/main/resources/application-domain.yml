@@ -32,3 +32,23 @@ spring:
         show_sql: true
         use_sql_comments: true
         format_sql: true
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState : 10s
+    instances:
+      searchBlog:
+        baseConfig: default
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      showDetails: always

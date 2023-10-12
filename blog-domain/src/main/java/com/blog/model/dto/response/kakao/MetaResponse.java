@@ -1,4 +1,4 @@
-package com.blog.model.dto.response;
+package com.blog.model.dto.response.kakao;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.Getter;

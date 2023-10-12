@@ -2,8 +2,8 @@ package com.blog.controller;
 
 import com.blog.model.dto.request.BlogSearchRequest;
 import com.blog.model.dto.response.BlogSearchResponse;
-import com.blog.model.dto.response.DocumentResponse;
-import com.blog.model.dto.response.MetaResponse;
+import com.blog.model.dto.response.kakao.DocumentResponse;
+import com.blog.model.dto.response.kakao.MetaResponse;
 import com.blog.service.BlogSearchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class BlogSearchController {
             @ModelAttribute BlogSearchRequest searchRequest
     ) {
         return ResponseEntity.ok(
-                blogSearchService.searchBlogWithCondition(searchRequest)
+                blogSearchService.searchBlogWithConditionAndKakao(searchRequest)
         );
     }
 }

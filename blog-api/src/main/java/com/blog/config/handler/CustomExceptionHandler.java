@@ -14,7 +14,7 @@ public class CustomExceptionHandler {
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<String> handleCustomException(CustomException ex) {
 
-        log.error(ex.getMessage());
+        log.error("##### CustomExceptionHandler.handleCustomException error {}", ex.getMessage());
 
         return new ResponseEntity<>(
                 ex.getMessage(),
@@ -25,7 +25,7 @@ public class CustomExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleAllException(Exception ex) {
 
-        log.error(ex.getMessage());
+        log.error("##### CustomExceptionHandler.handleAllException error {}", ex.getMessage());
 
         return new ResponseEntity<>(
                 ex.getMessage(),
