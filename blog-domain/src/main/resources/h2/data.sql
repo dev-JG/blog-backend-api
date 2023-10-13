@@ -1,6 +1,6 @@
 
 insert into keyword_search_log(keyword, count, status, last_search_date)
-values ('과자', 10, 'DISPLAY',now());
+values ('과자', 1, 'DISPLAY',now());
 insert into keyword_search_log(keyword, count, status, last_search_date)
 values ('오늘의추천', 20, 'DISPLAY',now());
 insert into keyword_search_log(keyword, count, status, last_search_date)
