@@ -1,6 +1,8 @@
 # 블로그 검색 API 프로젝트
 ***
 
+jar 파일 다운로드 경로: https://github.com/dev-JG/blog-backend-api/blob/main/blog-api-0.0.1-SNAPSHOT.jar
+
 ### 설계
 서버
 - Java 11
