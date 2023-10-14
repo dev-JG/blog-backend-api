@@ -10,6 +10,10 @@ jar 파일 다운로드 경로: https://github.com/dev-JG/blog-backend-api/blob/
 - JPA, queryDsl 5.0.0
 - H2, EhCache, lombok, Resilience4j
 
+멀티모듈 구성
+- blog-api
+- blog-domain
+
 DB / H2
 - keyword_search_log 검색키워드별 전시여부 및 검색횟수, 마지막 검색일자를 기록하는 로그성 테이블
 
@@ -30,9 +34,9 @@ DB / H2
 ### API 명세서
 블로그 검색 API
 - GET, /api/v1/blog/search
-- queryParam = query, sort, page(default 1), size(default 10)
+- queryParam = query, sort(ACCURACY:정확도순, RECENCY:최신순), page(default 1), size(default 10)
 - 카카오 블로그 정보를 검색하며, 카카오 장애시 네이버 블로그 검색으로 전환(서킷브레이커 적용)
-- 샘플: http://localhost:8080/api/v1/blog/search?query=%EA%B3%BC%EC%9E%90&page=1&size=5
+- 샘플: http://localhost:8080/api/v1/blog/search?query=%EA%B3%BC%EC%9E%90&page=1&size=5&sort=RECENCY
 
 인기검색어 Top 10 조회 API
 - GET, /api/v1/search/keyword/popular
